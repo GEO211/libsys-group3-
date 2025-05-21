@@ -169,8 +169,8 @@ public class DeveloperInfoDialog extends JDialog {
         JPanel socialPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 10, 0));
         socialPanel.setBackground(CARD_COLOR);
         socialPanel.setAlignmentX(Component.CENTER_ALIGNMENT);
-        addSocialLink(socialPanel, "Portfolio", "https://rengeo.geodevelopment.xyz/");
-        addSocialLink(socialPanel, "GitHub", "https://github.com/GEO211");
+        addSocialLink(socialPanel, "Portfolio", "https://geodevelopment.xyz/");
+        addSocialLink(socialPanel, "GitHub", "https://github.com/GEO211/libsys-group3-");
 
         infoPanel.add(Box.createVerticalStrut(5));
         infoPanel.add(nameLabel);
