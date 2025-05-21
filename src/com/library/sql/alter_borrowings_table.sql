@@ -1,0 +1,1 @@
+ALTER TABLE borrowings MODIFY COLUMN status VARCHAR(20); 
