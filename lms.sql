@@ -37,20 +37,7 @@ CREATE TABLE IF NOT EXISTS `admins` (
   UNIQUE KEY `username` (`username`)
 ) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dumping data for table library_system.admins: ~11 rows (approximately)
-INSERT INTO `admins` (`admin_id`, `username`, `password`, `first_name`, `last_name`, `role`, `email`, `contact_number`, `last_login`, `created_at`) VALUES
-	(1, 'a', 'a', 'System', 'Administrator', 'Super Admin', 'admin@library.com', NULL, '2025-04-30 14:43:09', '2025-01-29 12:29:01'),
-	(4, 'geo21', 'geo21', 'Geoo', 'Development', 'Super Admin', '21geo@gmail.com', NULL, '2025-02-24 18:30:11', '2025-02-24 18:30:01'),
-	(5, 'MikoLang', 'tanginamo', 'Miko', 'James', 'Librarian', 'mesteban1@gmail.com', NULL, '2025-02-24 18:31:59', '2025-02-24 18:31:46'),
-	(6, 'biboy', 'cutiepanda0', 'Daniel', 'Libunao', 'Librarian', 'libunaodaniel008@gmail.com', NULL, '2025-02-24 18:34:46', '2025-02-24 18:34:31'),
-	(7, 'diwata', 'diwatapares', 'diwata', 'pares', 'Librarian', 'diwatapares@gmail.com', NULL, '2025-02-24 18:41:56', '2025-02-24 18:39:05'),
-	(8, 'louishin_8', 'louise08', 'Louise', 'Ayco', 'Librarian', 'louisesofe@gmail.com', NULL, '2025-02-24 18:48:03', '2025-02-24 18:46:44'),
-	(9, '221GEO', 'QWERT@123', 'Geo', 'Development', 'Librarian', 'Geodevelopment@geodev.xyz', NULL, NULL, '2025-04-02 18:59:58'),
-	(10, '21GEo21', 'oQ4MAn2GfV7nV3kjYhDg3pIBudOSCYgI+QqmCrvLl0KR5cPT9tw3pO8NA1wLcWkZ', 'Geoo', 'Dev', 'Librarian', 'geodev@gmail.com', NULL, NULL, '2025-04-30 14:55:31'),
-	(11, 'geopogi', '8mitlmGITtcLMSSwXDJ5lR2IW2pidfhRh3lmkcxXL6JZQoLeTqKVi4i0gx4qRWu1', 'Renniel Geo', 'De Guzman Geanga', 'Librarian', 'geo@gmail.com', NULL, '2025-05-20 23:29:45', '2025-04-30 14:58:43'),
-	(12, 'louishin', 'jgYo2PxV/Lf2I1Vv3nDf8C/R4cPiYhmcjS7llPZ1DIBbRCrEJWADZGUPLlg+cIqS', 'Louise', 'Ayco', 'Librarian', 'louisesofeayco@gmail.com', NULL, NULL, '2025-05-05 18:19:42'),
-	(13, 'samsam', '/mGl2rvAvCzwlzbuAnWicQGA/npFSDEAyQ87OSqra+QeV6LAF21QJ+i+wrkYPYIr', 'Jessa', 'Morte', 'Librarian', 'mortejessa890@gmail.com', NULL, '2025-05-05 18:20:55', '2025-05-05 18:20:27'),
-	(14, 'georgie', '8V7Ind7HmwLqENozZbrtj8VaEzbapWvd2HWUvHvXGOetICAG5Ypf1WtsJGaVYJ7V', 'George', 'Salami', 'Librarian', 'Gs@gmail.com', NULL, '2025-05-20 22:27:33', '2025-05-20 22:27:28');
+-- Data exporting was unselected.
 
 -- Dumping structure for table library_system.audit_log
 DROP TABLE IF EXISTS `audit_log`;
@@ -71,7 +58,7 @@ CREATE TABLE IF NOT EXISTS `audit_log` (
   CONSTRAINT `audit_log_ibfk_3` FOREIGN KEY (`admin_id`) REFERENCES `admins` (`admin_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dumping data for table library_system.audit_log: ~0 rows (approximately)
+-- Data exporting was unselected.
 
 -- Dumping structure for table library_system.books
 DROP TABLE IF EXISTS `books`;
@@ -94,19 +81,7 @@ CREATE TABLE IF NOT EXISTS `books` (
   UNIQUE KEY `isbn` (`isbn`)
 ) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dumping data for table library_system.books: ~11 rows (approximately)
-INSERT INTO `books` (`book_id`, `isbn`, `title`, `author`, `publisher`, `publication_year`, `category`, `quantity`, `available_quantity`, `location`, `added_date`, `status`, `active`, `price`) VALUES
-	(3, '1', 'tea', 'adfs', 'adaw', 121, 'wad', 1, 1, 'adw', '2025-01-29 15:33:29', 'Available', 1, 0),
-	(4, '199067', 'My Sample of death', 'Francis Macapagal', 'Retrogal', 2009, 'horror', 2, 2, 'Koronadal City, South Cotabato', '2025-02-24 18:37:03', 'Available', 1, 0),
-	(5, '230492', 'A guide how to not become a dictator', 'diwata pares', 'diwata', 2025, 'war crimes', 2, 1, 'koronadal', '2025-02-24 18:45:01', 'Available', 1, 0),
-	(6, '12312', '', '', '', 2024, '', 2, 2, '', '2025-04-02 19:01:32', 'Available', 0, 0),
-	(7, '123', 'GE', 'GG', 'GG', 2027, 'TECH', 2, 2, 'TE', '2025-04-02 19:02:04', 'Available', 1, 0),
-	(9, '11', '', '', '', 2025, '2', 1, 1, '', '2025-04-14 18:46:56', 'Available', 0, 0),
-	(12, '12', '', '', '', 2024, '', 2, 2, 'marbel', '2025-04-14 18:50:17', 'Available', 0, 0),
-	(13, '23456', '', '', '', 234, '', 12, 12, '', '2025-04-14 18:53:21', 'Available', 0, 0),
-	(14, '12321', 'gege', '2342', 'savr', 12321, 'horror', 11, 11, '23r2', '2025-04-14 18:57:08', 'Available', 1, 0),
-	(15, '786', 'fyfghj', 'frtfyghvj', 'hjgjhkbk', 67890, 'uhvjhkj', 44, 44, 'marv', '2025-04-14 18:59:51', 'Available', 1, 0),
-	(16, '456789', 'Test', 'TEst', 'wer6ew', 20241, 'fghd', 12345, 12345, 'fewegrhtjy', '2025-04-30 15:01:29', 'Available', 1, 0);
+-- Data exporting was unselected.
 
 -- Dumping structure for table library_system.borrowings
 DROP TABLE IF EXISTS `borrowings`;
@@ -129,18 +104,7 @@ CREATE TABLE IF NOT EXISTS `borrowings` (
   CONSTRAINT `borrowings_ibfk_3` FOREIGN KEY (`admin_id`) REFERENCES `admins` (`admin_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dumping data for table library_system.borrowings: ~10 rows (approximately)
-INSERT INTO `borrowings` (`borrowing_id`, `student_id`, `book_id`, `admin_id`, `borrow_date`, `due_date`, `return_date`, `status`, `fine_amount`) VALUES
-	(3, 3, 3, 1, '2025-01-29 15:35:13', '2025-02-12 15:35:13', '2025-01-29 17:34:23', 'Cancelled', 0.00),
-	(4, 4, 3, 1, '2025-01-29 18:17:48', '2025-02-12 18:17:48', '2025-02-05 18:26:31', 'Cancelled', 0.00),
-	(5, 5, 3, 1, '2025-02-05 18:27:45', '2025-02-19 18:27:45', '2025-02-12 17:15:11', 'Returned', 0.00),
-	(6, 7, 5, 1, '2025-04-02 19:02:40', '2025-04-16 19:02:40', '2025-04-30 15:09:22', 'Returned', 14.00),
-	(7, 7, 5, 1, '2025-03-21 19:03:02', '2025-04-16 19:03:02', '2025-04-30 15:09:27', 'Returned', 14.00),
-	(8, 10, 4, 11, '2025-04-30 15:52:02', '2025-05-14 15:52:02', '2025-04-30 15:52:43', 'Returned', 0.00),
-	(9, 9, 5, 13, '2025-05-05 18:21:18', '2025-06-04 18:21:18', '2025-05-05 18:22:08', 'Returned', 0.00),
-	(10, 9, 4, 13, '2025-05-05 18:22:22', '2025-05-19 18:22:22', '2025-05-14 18:15:07', 'Returned', 0.00),
-	(11, 9, 5, 11, '2025-05-05 19:05:43', '2025-05-19 19:05:02', NULL, 'Borrowed', 0.00),
-	(12, 9, 3, 11, '2025-05-05 19:08:04', '2025-05-19 19:07:41', '2025-05-05 19:08:21', 'Returned', 0.00);
+-- Data exporting was unselected.
 
 -- Dumping structure for table library_system.councils
 DROP TABLE IF EXISTS `councils`;
@@ -151,15 +115,7 @@ CREATE TABLE IF NOT EXISTS `councils` (
   PRIMARY KEY (`council_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dumping data for table library_system.councils: ~7 rows (approximately)
-INSERT INTO `councils` (`council_id`, `council_name`, `description`) VALUES
-	(1, 'CEAC', 'College of Engineering, Architecture and Computing'),
-	(2, 'CAS', 'College of Arts and Sciences'),
-	(3, 'CBA', 'College of Business Administration'),
-	(4, 'BPED', 'College of Education'),
-	(5, 'Personal', 'Faculty and Staff'),
-	(6, 'Others', 'External Users'),
-	(10, 'GEO DEV', 'test Teadvsf F');
+-- Data exporting was unselected.
 
 -- Dumping structure for table library_system.courses
 DROP TABLE IF EXISTS `courses`;
@@ -175,19 +131,7 @@ CREATE TABLE IF NOT EXISTS `courses` (
   CONSTRAINT `courses_ibfk_1` FOREIGN KEY (`council_id`) REFERENCES `councils` (`council_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dumping data for table library_system.courses: ~11 rows (approximately)
-INSERT INTO `courses` (`course_id`, `council_id`, `course_name`, `course_code`, `active`) VALUES
-	(4, 1, 'BSIT', '2024 - 2025', 1),
-	(5, 1, 'BSCS', 'aftc-1222', 1),
-	(6, 1, 'test', 'test', 0),
-	(7, 1, 'asd', 'afc', 1),
-	(8, 2, '', '', 0),
-	(9, 4, '', '', 0),
-	(10, 4, '', '', 0),
-	(11, 4, '', '', 0),
-	(12, 4, '', '', 0),
-	(13, 4, '', '', 0),
-	(14, 10, 'RETSG', 'GEoo', 1);
+-- Data exporting was unselected.
 
 -- Dumping structure for table library_system.reports
 DROP TABLE IF EXISTS `reports`;
@@ -209,7 +153,7 @@ CREATE TABLE IF NOT EXISTS `reports` (
   CONSTRAINT `reports_ibfk_2` FOREIGN KEY (`processed_by`) REFERENCES `admins` (`admin_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dumping data for table library_system.reports: ~0 rows (approximately)
+-- Data exporting was unselected.
 
 -- Dumping structure for table library_system.settings
 DROP TABLE IF EXISTS `settings`;
@@ -221,15 +165,7 @@ CREATE TABLE IF NOT EXISTS `settings` (
   PRIMARY KEY (`setting_key`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dumping data for table library_system.settings: ~7 rows (approximately)
-INSERT INTO `settings` (`setting_key`, `setting_value`, `description`, `updated_at`) VALUES
-	('borrow_days', '14', 'Default number of days for borrowing books', '2025-01-29 12:29:01'),
-	('email_notifications', 'true', 'Enable/disable email notifications', '2025-01-29 12:29:01'),
-	('fine_rate', '1.00', 'Fine rate per day for overdue books', '2025-01-29 12:29:01'),
-	('smtp_host', 'smtp.gmail.com', 'SMTP server hostname', '2025-01-29 12:29:01'),
-	('smtp_password', 'your-app-password', 'SMTP password (for Gmail, use App Password)', '2025-01-29 12:29:01'),
-	('smtp_port', '587', 'SMTP server port', '2025-01-29 12:29:01'),
-	('smtp_username', 'your.email@gmail.com', 'SMTP username', '2025-01-29 12:29:01');
+-- Data exporting was unselected.
 
 -- Dumping structure for table library_system.students
 DROP TABLE IF EXISTS `students`;
@@ -255,16 +191,7 @@ CREATE TABLE IF NOT EXISTS `students` (
   CONSTRAINT `students_ibfk_2` FOREIGN KEY (`council_id`) REFERENCES `councils` (`council_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dumping data for table library_system.students: ~8 rows (approximately)
-INSERT INTO `students` (`student_id`, `id_number`, `first_name`, `last_name`, `course_id`, `council_id`, `school_year`, `contact_number`, `email`, `registration_date`, `status`, `year_level`, `active`) VALUES
-	(3, '2023079', 'Renniel Geo', 'Geanga', 4, 1, '2024 - 2025', '09614166722', 'geangarenniel@gmail.com', '2025-01-29 15:35:02', 'Inactive', '1st Year', 0),
-	(4, '1', 'Geo', 'Development', 4, 1, '2024 - 2025', '87', 'asfs@gmail.com', '2025-01-29 18:17:35', 'Inactive', '5th Year', 0),
-	(5, '2023078', 'Daniel', 'Libunao', 4, 1, '2025', '23253', 'libunao@gmail.com', '2025-02-05 18:25:33', 'Active', '1st Year', 1),
-	(6, '2345678', 'poikjhxc', 'cvj', 4, 1, '2007', '0923456788765', 'adsa@rgfhjkl.com', '2025-02-12 17:14:47', 'Inactive', '1st Year', 0),
-	(7, '2023604', 'Louise', 'Ayco', 4, 1, '2025', '0912345678', 'ayvo@gmail.com', '2025-02-12 18:44:54', 'Active', '1st Year', 1),
-	(8, '20241325', 'Miko', 'James', 4, 1, '2024', '09123456789', 'mesteban111@gmail.com', '2025-02-24 18:33:05', 'Active', '1st Year', 1),
-	(9, '2023795', 'Jessa Mae', 'Morte', 4, 1, '2024-2025', '0939293949394', 'morte@gmail.com', '2025-02-24 18:42:44', 'Active', '2nd Year', 1),
-	(10, '2023028', 'robert', 'andulana', 4, 1, '2025', '127565446', 'hentailover@gmail.com', '2025-04-30 15:51:35', 'Active', '1st Year', 1);
+-- Data exporting was unselected.
 
 -- Dumping structure for view library_system.vw_available_books
 DROP VIEW IF EXISTS `vw_available_books`;

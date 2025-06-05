@@ -64,16 +64,16 @@ public class DeveloperInfoDialog extends JDialog {
         gridPanel.setBackground(BACKGROUND_COLOR);
 
         // Add role cards
-        addRoleCard(gridPanel, "UX/UI DESIGN", "DANIEL LIBUNAO",
-                "• User Interface Design\n• User Experience Flow\n• Visual Elements");
-        addRoleCard(gridPanel, "SQL DESIGN", "ROE ARBOLEDA",
-                "• Database Architecture\n• Query Optimization\n• Data Modeling");
-        addRoleCard(gridPanel, "PAPERS/RESEARCH", "LOUISE AYCO",
-                "• Documentation\n• Research Analysis\n• Technical Writing");
-        addRoleCard(gridPanel, "IDEA DESIGN", "JESSA MORTE",
-                "• Concept Development\n• Feature Planning\n• Innovation Strategy");
-        addRoleCard(gridPanel, "IDEA DESIGN", "RAY JOY VILLANUEVA",
-                "• Concept Development\n• Feature Planning\n• Innovation Strategy");
+        addRoleCard(gridPanel, "Sponsor", "DANIEL",
+                "N/a");
+        addRoleCard(gridPanel, "Sponsor", "ROE",
+                "N/a");
+        addRoleCard(gridPanel, "Sponsor", "LOUISE",
+                "N/a");
+        addRoleCard(gridPanel, "Sponsor", "JESSA",
+                "N/a");
+        addRoleCard(gridPanel, "Sponsor", "RAY",
+                "N/a");
 
         mainPanel.add(gridPanel);
 
@@ -145,7 +145,7 @@ public class DeveloperInfoDialog extends JDialog {
         infoPanel.setBorder(new EmptyBorder(10, 20, 10, 20)); // Add horizontal padding
 
         // Update name and center it
-        JLabel nameLabel = new JLabel("Renniel Geo Geanga");
+        JLabel nameLabel = new JLabel("Geo");
         nameLabel.setFont(new Font("Segoe UI", Font.BOLD, 28));
         nameLabel.setForeground(new Color(33, 33, 33));
         nameLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
